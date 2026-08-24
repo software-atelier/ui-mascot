@@ -48,7 +48,7 @@ export class UiMascot {
 		// Speech bubble container (inside ui element, next to character)
 		this.speechBubble = document.createElement('div');
 		this.speechBubble.className = 'ui__speech-bubble';
-		this.speechBubble.innerHTML = '<button type="button" class="ui__speech-close" aria-label="Sprechblase schliessen">×</button><p></p>';
+		this.speechBubble.innerHTML = '<button type="button" class="ui__speech-close" aria-label="Close speech bubble">×</button><p></p>';
 		this.speechBubble.style.display = 'none';
 		this.target.appendChild(this.speechBubble);
 		this.speechBubble.addEventListener('click', () => {

@@ -2,39 +2,39 @@
 
 ![ui-default.png](assets/ui-default.png)
 
-Dieses Paket enthält UI-Mascot als kleine, einbindbare UI-Library mit relativen Pfaden.
+This package contains UI-Mascot, a small, embeddable UI library with relative paths.
 
-## Dateien
+## Files
 
-- `ui.js` – die Library (ES Module)
-- `ui.css` – Basis-Styles
-- `demo.html` – interaktive Demo
-- `assets/` – alle Varianten
+- `ui.js` – the library (ES module)
+- `ui.css` – base styles
+- `demo.html` – interactive demo
+- `assets/` – all variants
 
-### Verfügbare Varianten
+### Available Variants
 
-| Variante | Datei | Beschreibung |
+| Variant | File | Description |
 |----------|-------|--------------|
-| `default` | ui-default.png | Standard-UI-Mascot |
-| `tablet` | ui-tablet.png | UI-Mascot mit Tablet |
-| `timer` | ui-timer.png | UI-Mascot mit Stoppuhr |
-| `agreement` | ui-agreement.png | UI-Mascot mit Agreement/Dokument |
-| `celebrate` | ui-celebrate.png | feiernder UI-Mascot |
-| `celebrate2` | ui-celebrate2.png | zweite Feier-Variante |
-| `clipboard` | ui-clipboard.png | UI-Mascot mit Clipboard |
-| `confused` | ui-confused.png | verwirrter UI-Mascot |
-| `drink` | ui-drink.png | UI-Mascot mit Getränk |
-| `sandtimer` | ui-sandtimer.png | UI-Mascot mit Sanduhr |
-| `wave` | ui-wave.png | winkender UI-Mascot |
-| `call` | ui-call.png | UI-Mascot beim Telefonieren |
-| `reading` | ui-reading.png | UI-Mascot beim Lesen |
-| `school` | ui-school.png | UI-Mascot in der Schule |
-| `sleeping` | ui-sleeping.png | schlafender UI-Mascot |
-| `thinking` | ui-thinking.png | nachdenklicher UI-Mascot |
-| `work` | ui-work.png | UI-Mascot bei der Arbeit |
-| `shadow.png` | Schatten | (wird automatisch geladen) |
+| `default` | ui-default.png | Standard UI mascot |
+| `tablet` | ui-tablet.png | UI mascot with tablet |
+| `timer` | ui-timer.png | UI mascot with stopwatch |
+| `agreement` | ui-agreement.png | UI mascot with agreement/document |
+| `celebrate` | ui-celebrate.png | celebrating UI mascot |
+| `celebrate2` | ui-celebrate2.png | second celebration variant |
+| `clipboard` | ui-clipboard.png | UI mascot with clipboard |
+| `confused` | ui-confused.png | confused UI mascot |
+| `drink` | ui-drink.png | UI mascot with a drink |
+| `sandtimer` | ui-sandtimer.png | UI mascot with hourglass |
+| `wave` | ui-wave.png | waving UI mascot |
+| `call` | ui-call.png | UI mascot on the phone |
+| `reading` | ui-reading.png | UI mascot reading |
+| `school` | ui-school.png | UI mascot at school |
+| `sleeping` | ui-sleeping.png | sleeping UI mascot |
+| `thinking` | ui-thinking.png | pensive UI mascot |
+| `work` | ui-work.png | UI mascot at work |
+| `shadow.png` | Shadow | (loaded automatically) |
 
-## Beispiel
+## Example
 
 ```html
 <link rel="stylesheet" href="./ui.css" />
@@ -55,7 +55,7 @@ Dieses Paket enthält UI-Mascot als kleine, einbindbare UI-Library mit relativen
 ## API
 
 ### setVariant(variant)
-Wählt eine UI-Mascot-Variante:
+Selects a UI mascot variant:
 
 ```js
 ui.setVariant('default');
@@ -78,126 +78,126 @@ ui.setVariant('work');
 ```
 
 ### setState(state)
-Setzt den visuellen Zustand:
+Sets the visual state:
 
 ```js
-ui.setState('idle');        // sanftes Schweben
-ui.setState('attention');   // aufmerksam, nickend
-ui.setState('think');       // nachdenklich
-ui.setState('celebrate');   // feiern, hüpfen
-ui.setState('wave');        // winken
-ui.setState('point');       // zeigen
-ui.setState('sleepy');      // müde, ruhig
-ui.setState('confused');    // verwirrt
+ui.setState('idle');        // gentle floating
+ui.setState('attention');   // attentive, nodding
+ui.setState('think');       // thoughtful
+ui.setState('celebrate');   // celebrate, hop
+ui.setState('wave');        // wave
+ui.setState('point');       // point
+ui.setState('sleepy');      // tired, calm
+ui.setState('confused');    // confused
 ```
 
 ### setSize(size, shadowSize?)
-Passt die Grösse an:
+Adjusts the size:
 
 ```js
-ui.setSize(140);           // nur Hauptgrösse
-ui.setSize(140, 86);       // Hauptgrösse + Schatten
+ui.setSize(140);           // main size only
+ui.setSize(140, 86);       // main size + shadow
 ```
 
 ### mount(target)
-Verschiebt den UI-Mascot in ein anderes Element:
+Moves the UI mascot into another element:
 
 ```js
-ui.mount('#anderer-slot');
+ui.mount('#other-slot');
 ```
 
 ### destroy()
-Entfernt den UI-Mascot vollständig:
+Removes the UI mascot completely:
 
 ```js
 ui.destroy();
 ```
 
 ### say(message, duration?)
-Zeigt eine Sprechblase mit einer Nachricht:
+Shows a speech bubble with a message:
 
 ```js
-ui.say('Hallo! 👋');           // Sprechblase anzeigen
-ui.say('Hilfe!', 5000);        // Sprechblase, auto-hide nach 5s
+ui.say('Hello! 👋');           // show speech bubble
+ui.say('Help!', 5000);        // speech bubble, auto-hide after 5s
 ```
 
 ### silence()
-Versteckt die Sprechblase:
+Hides the speech bubble:
 
 ```js
 ui.silence();
 ```
 
 ### setSpeechBubblePosition(position)
-Position der Sprechblase ('left' oder 'right'):
+Position of the speech bubble ('left' or 'right'):
 
 ```js
-ui.setSpeechBubblePosition('left');   // Links von UI-Mascot
-ui.setSpeechBubblePosition('right');  // Rechts von UI-Mascot
+ui.setSpeechBubblePosition('left');   // Left of the UI mascot
+ui.setSpeechBubblePosition('right');  // Right of the UI mascot
 ```
 
 ### setSpeechBubbleSize({ minWidth, maxWidth })
-Breite der Sprechblase anpassen:
+Adjusts the width of the speech bubble:
 
 ```js
 ui.setSpeechBubbleSize({ minWidth: 180, maxWidth: 280 });
 ```
 
 ### setSpeechBubbleClosable(closable)
-Schliessen per Klick auf die ganze Sprechblase aktivieren:
+Enables closing by clicking anywhere on the whole speech bubble:
 
 ```js
 ui.setSpeechBubbleClosable(true);
 ```
 
 ### setOnClick(handler)
-Callback registrieren, der bei Klick auf UI-Mascot ausgelöst wird:
+Registers a callback triggered when clicking the UI mascot:
 
 ```js
 ui.setOnClick((event, ui) => {
-  console.log('UI-Mascot geklickt');
+  console.log('UI mascot clicked');
 });
 ```
 
 ### setFlipX(flip)
-Spiegelt UI-Mascot horizontal an der vertikalen Achse:
+Mirrors the UI mascot horizontally:
 
 ```js
-ui.setFlipX(true);  // schaut in die andere Richtung
+ui.setFlipX(true);  // faces the other direction
 ui.setFlipX(false); // normal
 ```
 
 ### getState()
-Liest den aktuellen Zustand von UI-Mascot aus:
+Reads the current state of the UI mascot:
 
 ```js
 const state = ui.getState();
 console.log(state.variant, state.state, state.flipX);
 ```
 
-Enthält u. a.: `variant`, `state`, `size`, `shadowSize`, `speechBubblePosition`, `speechBubbleMinWidth`, `speechBubbleMaxWidth`, `speechBubbleClosable`, `flipX`, `speechBubbleVisible`, `speechBubbleText`, `hasOnClick`.
+Includes among others: `variant`, `state`, `size`, `shadowSize`, `speechBubblePosition`, `speechBubbleMinWidth`, `speechBubbleMaxWidth`, `speechBubbleClosable`, `flipX`, `speechBubbleVisible`, `speechBubbleText`, `hasOnClick`.
 
-## Optionen
+## Options
 
-Bei der Initialisierung:
+At initialization:
 
 ```js
 new UiMascot('#slot', {
-	assetBase: './assets',   // Basispfad zu den Bildern
-	variant: 'default',      // Startvariante
-	state: 'idle',           // Startzustand
-	size: 140,               // Hauptgrösse in px
-	shadowSize: 86,          // Schattengrösse in px
-	alt: 'UI-Mascot',            // Alt-Text für Barrierefreiheit
-	speechBubblePosition: 'left',  // Sprechblase: 'left' oder 'right'
-	speechBubbleMinWidth: 150,     // Mindestbreite der Sprechblase
-	speechBubbleMaxWidth: 320,     // Maximalbreite der Sprechblase
-	speechBubbleClosable: false,  // Ganze Bubble klickbar zum Schliessen
-	onClick: (event, ui) => {}, // Callback bei Klick auf UI-Mascot
-	flipX: false                 // UI-Mascot horizontal spiegeln
+	assetBase: './assets',   // base path to the images
+	variant: 'default',      // starting variant
+	state: 'idle',           // starting state
+	size: 140,               // main size in px
+	shadowSize: 86,          // shadow size in px
+	alt: 'UI-Mascot',            // alt text for accessibility
+	speechBubblePosition: 'left',  // speech bubble: 'left' or 'right'
+	speechBubbleMinWidth: 150,     // minimum width of the speech bubble
+	speechBubbleMaxWidth: 320,     // maximum width of the speech bubble
+	speechBubbleClosable: false,  // whole bubble clickable to close
+	onClick: (event, ui) => {}, // callback when clicking the UI mascot
+	flipX: false                 // mirror the UI mascot horizontally
 });
 ```
 
-## Demo starten
+## Running the Demo
 
-Einfach `demo.html` im Browser öffnen — keine Build-Schritte nötig.
+Just open `demo.html` in your browser — no build steps required.
