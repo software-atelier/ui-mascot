@@ -4,6 +4,8 @@
 
 This package contains UI-Mascot, a small, embeddable UI library with relative paths.
 
+**[Try the interactive demo](https://software-atelier.github.io/ui-mascot/)** ([direct `demo.html` link](https://software-atelier.github.io/ui-mascot/demo.html)).
+
 ## Files
 
 - `ui.js` – the library (ES module)
@@ -200,7 +202,7 @@ new UiMascot('#slot', {
 
 ## Running the Demo
 
-Just open `demo.html` in your browser — no build steps required.
+Use the [hosted demo](https://software-atelier.github.io/ui-mascot/) or serve this directory with a local HTTP server and open `demo.html` (for example, `python3 -m http.server`). The demo uses an ES module, which browsers typically do not load from a `file://` URL.
 
 ## Customization
 
